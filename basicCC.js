@@ -24,6 +24,12 @@ class testContract extends Contract{
 
     //Query student marks
     async queryMarks(ctx, studentId){
-        let marksAsBytes
+        let marksAsBytes=await ctx.stub.getState(studentId);
+        if (!marksAsBytes || marksAsBytes.toString().length<=0){
+            throw new Error('Student with this ID does not exist: ');
+
+        }
+        let marks=JSON.parse(marksAsBytes.toString());
+        return JSON.stringify(marks);
     }
 }
