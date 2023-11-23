@@ -1,0 +1,1 @@
+npm install --save fabric-contract-api fabric-shim
