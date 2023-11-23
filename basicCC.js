@@ -10,7 +10,7 @@ class testContract extends Contract{
             subj2:subject2,
             subj3:subject3
         };
-        await ctx.stub.putState(studentId, Buffer.from(JSON.stringify(marks)));
+        await ctx.stub.putState(studentId, Buffer.from(JSON.stringify(marks)));  //await used to make function wait from execution until the condition inside it getting fullfilled
 
         console.log('Student Marks added to the ledger Successfully...');
     }
