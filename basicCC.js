@@ -1,4 +1,4 @@
-const {Contract}=require('fabric-contract-api');
+const {Contract}=require('fabric-contract-api'); //"require" directive is used to load a Node.js module.
 
 class testContract extends Contract{
     //functions goes here
