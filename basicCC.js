@@ -3,6 +3,11 @@ const {Contract}=require('fabric-contract-api'); //"require" directive is used t
 class testContract extends Contract{
     //functions goes here
 
+    //instantiate
+    async instantiate(ctx){
+        console.log('Chaincode deployed Successfully...');
+    }
+
     //creating an object to store marks of a student in each subject and storing this obj as a value and key as studentId
     async addMarks(ctx, studentId, subject1, subject2, subject3){
         let marks={
