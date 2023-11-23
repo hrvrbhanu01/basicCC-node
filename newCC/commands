@@ -1,1 +1,5 @@
 npm install --save fabric-contract-api fabric-shim
+
+touch newCC.js       //to create a new file
+
+
