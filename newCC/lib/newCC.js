@@ -11,7 +11,7 @@ class newCC extends Contract{
         this.TxId=''
     }
 
-    async beforeTransaction(ctx){
+    async beforeTransaction(ctx){         //ctx means context
         this.TxId=ctx.stub.getTxID();
         console.log('We can do some logging for ${this.TxId} !!')
     }
